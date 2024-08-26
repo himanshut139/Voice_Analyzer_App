@@ -47,7 +47,7 @@ export default {
       this.phrasesFetched = false;
 
       try {
-        const response = await fetch(`http://localhost:5000/phrase-frequencies/${this.userId}`);
+        const response = await fetch(`https://voice-backend-2odw.onrender.com/phrase-frequencies/${this.userId}`);
         if (response.ok) {
           this.phrases = await response.json();
         } else {

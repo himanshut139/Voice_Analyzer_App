@@ -129,7 +129,7 @@ export default {
       formData.append('user_id', this.userId);
       formData.append('audio', this.audioData, 'audio.wav');
 
-      fetch('http://localhost:5000/transcribe_live', {
+      fetch('https://voice-backend-2odw.onrender.com/transcribe_live', {
         method: 'POST',
         body: formData,
       })
@@ -175,7 +175,7 @@ export default {
       formData.append('user_id', this.userId);
       formData.append('audio', this.uploadedAudio);
 
-      fetch('http://localhost:5000/transcribe', {
+      fetch('https://voice-backend-2odw.onrender.com/transcribe', {
         method: 'POST',
         body: formData,
       })
@@ -203,7 +203,7 @@ export default {
         });
     },
     fetchSimilarUsers() {
-      fetch(`http://localhost:5000/compare_similarity/${this.userId}`)
+      fetch(`https://voice-backend-2odw.onrender.com/compare_similarity/${this.userId}`)
         .then(response => {
           if (!response.ok) {
             return response.json().then(data => {
