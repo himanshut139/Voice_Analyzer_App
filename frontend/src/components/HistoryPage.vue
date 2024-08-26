@@ -35,7 +35,7 @@ export default {
     async fetchHistory() {
       this.historyFetched = false;
       try {
-        const response = await fetch(`http://127.0.0.1:5000/history/${this.userId}`);
+        const response = await fetch(`https://voice-backend-2odw.onrender.com/history/${this.userId}`);
         if (response.ok) {
           this.history = await response.json();
         } else {
